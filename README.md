@@ -1,4 +1,4 @@
-<h3>Introdução:</h3>
+<h3>Introdução</h3>
 
 Primeiro projeto pessoal em <b>analise dados</b> onde ele tem como objetivo o controle financeiro e estatístico da atividade de <b>day trader</b> que já vinha estudando a alguns anos.
 
@@ -12,7 +12,7 @@ Foi necessário um pouco de programação em <b>Python</b> utilizando framework 
 
 Em busca de aprender mais sobre o framework e tentando sofisticar mais a aplicação, irei adicionar mais informações que podem ser úteis sobre trading, melhorar o visual dos painéis no Power BI, desenvolver um front-end pra aplicação e adicionar novos painéis por exemplo de desempenho no mercado de derivativos (opções).
 
-<h3>Sobre a ideia do projeto:</h3>
+<h3>Sobre a ideia do projeto</h3>
   
   Um dos primeiros passos que as pessoas que iniciam no mercado financeiro tomam para operar <b>day trade</b> é aprender sobre padrões, padrões de preços, padrões de comportamento, entre outras coisas. Faz sentido, em um ambiente tão aleatório e cheio de ruídos apesar de toda a aleatoriedade há os momentos em que os mercados evoluem de alguma maneira não aleatória, e torna possível acompanhar alguns padrões que podem ser sinais significativos de compra ou venda em algum momento oportuno.
   
