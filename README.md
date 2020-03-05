@@ -20,47 +20,49 @@ Em busca de aprender mais sobre o framework e tentando sofisticar mais a aplica�
   
   Só que há um porém, se pegarmos livros, artigos e conteúdos da internet, encontraremos centenas desses padrões que podem ser aplicados das mais variadas maneiras, e que não se encontra com facilidade em que tipo de contexto analítico esses padrões costumam funcionar mínimamente bem.
   
-  Então com tantos padrões e tantas maneiras de serem aplicados, a tentativa de estruturar uma <b>metodologia de trading</b> a fim de explorar alguma gama de vantagem é muito difícil, se o processo é feito apenas por observação e intuição sem que haja uma maneira de guardar, tratar e analisar as informações que ao longo de uma grande amostragem esses padrões costumam trazer.
+  Então com tantos padrões e tantas maneiras de serem aplicados, a tentativa de estruturar uma <b>metodologia de trading</b> a fim de explorar alguma gama de vantagem é muito difícil se o processo é feito apenas por observação e intuição, sem que haja uma maneira de guardar, tratar e analisar os dados que ao longo de uma grande amostragem esses padrões costumam trazer.
   
-  Foi ai que em meados de novembro do ano passoado tive a ideia de buscar sofisticar minhas analises no <b>Excel</b>, tentando desenvolver dashboards pra estruturar uma <b>metodologia de trading</b> explorando o máximo possível os dados e tentando encontrar uma vantagem, acabei conhecendo as areas de <b>Business Intelligence</b> e <b>data analytics</b>.
+  Foi ai que tive a ideia de buscar sofisticar minhas analises no <b>Excel</b>, tentando desenvolver dashboards pra estruturar uma <b>metodologia de trading</b> explorando o máximo possível os dados e tentando encontrar uma vantagem, acabei conhecendo as areas de <b>Business Intelligence</b> e <b>data analytics</b>.
   
-  Essa ideia de montar um projeto de <b>BI</b> foi me levando a outras necessidades como aprender sobre <b>bancos de dados</b>, <b>frameworks</b>, <b>linguagem python</b> entre outros tecnologias que com o tempo venho buscando aprender.
+  Essa ideia de montar um projeto de <b>BI</b> foi me levando a outras necessidades e curiosidades como aprender sobre <b>bancos de dados</b>, <b>frameworks</b>, <b>linguagem python</b> entre outros tecnologias que com o tempo venho buscando aprender.
   
-  E a título de curiosidade, no meio desse processo acabei descobrindo algumas informações relevante em relação ao meu desempenho no trading, que talvez não sei se conseguiria apenas por feeling. O fato de que dedicando as operações de day trade apenas as duas horas mais volateis do dia, que são a abertura do mercado a vista e do mercado americano (das 10:00 as 12:00), conseguiria otimizar o tempo gasto e os custos alcançando resultados melhores como mostra a curva de capital abaixo:
+  E a título de curiosidade, no meio desse processo acabei descobrindo algumas informações relevantes em relação ao meu desempenho no trading, que talvez não sei se conseguiria apenas por feeling. O fato de que dedicando as operações de day trade apenas as duas horas mais volateis do dia, que são a abertura do mercado a vista e do mercado americano (das 10:00 as 12:00), conseguiria otimizar o tempo gasto e os custos alcançando resultados melhores como mostra a curva de capital abaixo:
   
   <img src=https://i.imgur.com/HzNlCnx.png width=950 height=410>
 
-<h4><b>Instalação/Configuração</b></h4>
+<h3><b>Instalação/Configuração</b></h3>
 
-Instale o virtualenv:
+<b>Instale o virtualenv</b>
 
 Execute no terminal ```pip install virtualenv```
 
-Crie um ambiente virtual:
+<b>Crie um ambiente virtual</b>
 
 Execute no terminal ```virtualenv nome_do_ambiente_virtual```
 
-Inicie o ambiente virtual:
+<b>Inicie o ambiente virtual</b>
 
 Execute no terminal ```./nome_do_ambiente_virtual/Scripts/activate```
 
-Abra a pasta do ambiente virtual:
+<b>Abra a pasta do ambiente virtual</b>
 
 Execute no terminal ```cd nome_do_ambiente_virtual```
 
-Faça a instalação do Django:
+<b>Faça a instalação do Django</b>
 
 Execute no terminal ```pip install django```
 
-Baixe o repositorio:
+<b>Baixe o repositório</b>
 
 Execute no terminal ```git clone https://github.com/mfidelis1994/trade_analytics.git```
 
-Abra a pasta do respositorio: 
+<b>Abra a pasta do respositório</b>
 
 Execute no terminal ```cd trader_analytics```
 
-Você precisa ter instalado o adaptador <b>PSYCOPG</b> para conectar o Django ao banco de dados PostgreSQL:
+<h3>Conectando o Django ao banco de dados</h3>
+
+Você precisa ter instalado o adaptador PSYCOPG para conectar o Django ao banco de dados PostgreSQL.
 
 Execute no terminal ```pip install psycopg2```
 
@@ -83,24 +85,26 @@ Você pode baixar a última versão do gerenciador de banco de dados PostgreSQL 
 
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
-Após a instalação do gerenciador de de banco de dados, abra o pgAdmin 4:
+Após a instalação do gerenciador de de banco de dados, abra o <b>pgAdmin 4</b>.
 
-Vai pedir que seja cadastrado uma senha master de Admin, coloque a senha como configurado no escopo DATABASES do settings.py.
+Irá pedir que seja cadastrado uma senha master de Admin, coloque a senha como configurado no escopo DATABASES do settings.py.
 ![imagem1](https://user-images.githubusercontent.com/46089953/75961675-2f07b000-5ea1-11ea-9a5e-f3baacb28852.png)
 
-Em seguida clique em 'Servers e digite a senha de Admin cadastrada.
+Em seguida clique em 'Servers' e digite a senha de Admin cadastrada.
 
 ![imagem2](https://user-images.githubusercontent.com/46089953/75961707-4050bc80-5ea1-11ea-956d-b5c897a5539d.png)
 
-Crie uma nova database com o mesmo nome configurado no escopo DATABASES do settings.py.
+Crie um novo banco de dados com o mesmo nome configurado no escopo DATABASES do settings.py.
 
 ![imagem3](https://user-images.githubusercontent.com/46089953/75961735-4e064200-5ea1-11ea-9980-0794914f95ad.png)
 
 ![imagem4](https://user-images.githubusercontent.com/46089953/75961752-56f71380-5ea1-11ea-91c6-0a7c0ffd6911.png)
 
-Feito isso precisamos importar os modelos de dados pro banco de dados.
+<h3><b>Criando as tabelas no banco de dados</b></h3>
 
-Execute no terminal python manage.py migrate
+Importando os modelos de dados pro banco de dados.
+
+Execute no terminal ```python manage.py migrate```
 
 ![imagem5](https://user-images.githubusercontent.com/46089953/75961753-578faa00-5ea1-11ea-8868-1daf6ea0a0b3.png)
 
@@ -110,19 +114,19 @@ Verá que as tabelas no banco de dados foram criadas de acordo como foi programa
 
 Feito isso crie um super usuário.
 
-Execute o comando python manage.py createsuperuser
+Execute o comando ```python manage.py createsuperuser```
 
-Digite o nome em seguida email, senha e confirmação da senha.
+Digite o nome, em seguida email, senha e confirmação da senha.
 
-Execute no terminal python manage.py runserver
+Execute no terminal ```python manage.py runserver```
 
-Abra o browser e digite o endereço local: 127.0.0.1:8000/admin
+Abra o browser e digite o endereço local: ```127.0.0.1:8000/admin```
 
 Digite o usuario e senha cadastrado no Django.
 
 ![imagem7](https://user-images.githubusercontent.com/46089953/75961755-58284080-5ea1-11ea-8657-02bde7a6476f.png)
 
-Abrirá a a pagina de administração do site onde pode ser cadastradas as operações feitas.
+Abrirá a pagina de administração do site onde pode ser cadastrados os dados das operações feitas.
 
 ![imagem8](https://user-images.githubusercontent.com/46089953/75961757-58c0d700-5ea1-11ea-8bc7-f24024f96eb2.png)
 
@@ -130,7 +134,7 @@ Por exemplo na seção de day trade:
 
 ![imagem9](https://user-images.githubusercontent.com/46089953/75961758-59596d80-5ea1-11ea-8757-00f02afae8af.png)
 
-Agora pra conectar o Dashboard Trading ao banco de dados, você precisará do Power BI que pode ser baixado na Microsoft Store.
+Agora pra conectar o Dashboard Trading ao banco de dados, você precisará do <b>Power BI</b> que pode ser baixado na <b>Microsoft Store</b>.
 
 Instalado o Power BI clique em obter dados:
 
