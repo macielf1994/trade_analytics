@@ -112,11 +112,11 @@ Verá que as tabelas no banco de dados foram criadas de acordo como foi programa
 
 ![imagem6](https://user-images.githubusercontent.com/46089953/75961754-578faa00-5ea1-11ea-9e67-9e3e257a8c85.png)
 
-Feito isso crie um super usuário.
+<b>Feito isso crie um super usuário.</b>
 
 Execute o comando ```python manage.py createsuperuser```
 
-Digite o nome, em seguida email, senha e confirmação da senha.
+<b>Em seguida, inicie o servidor web de desenvolvimento.</b>
 
 Execute no terminal ```python manage.py runserver```
 
